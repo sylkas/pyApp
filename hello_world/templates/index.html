@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Strona główna{% endblock %}
+{% block content %}
+<h2>Strona główna</h2>
+<p>
+    Witaj na mojej stronie
+    {% if user %}   
+        <code class="docutils literal"><span class="pre">{{user.name | striptags}}</span></code>
+    {% endif %}
+</p>
+{% endblock %}
